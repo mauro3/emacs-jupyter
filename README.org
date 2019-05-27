@@ -616,6 +616,15 @@ available when =jupyter-org-interaction-mode= is enabled
 | =C-c C-i=   | =jupyter-repl-interrupt-kernel= |
 | =C-c C-r=   | =jupyter-repl-restart-kernel=   |
 
+*** Associated REPL and kernel shutdown
+
+The REPL-buffer associated with a org-mode code block is named =*jupyter-repl[kernel_name]-session_name*= 
+where =kernel_name= is related to the =:kernel= token and =session_name= is the value of the =:session= 
+token.  For example =*jupyter-repl[julia 1.1.0]-jl*=.  Note that this REPL can be interacted with just like a 
+ordinary jupyter-mode REPL.
+
+To shutdown the kernel of an org-mode code block, kill the associated REPL-buffer.
+
 ** Customizable variables available for all frontends
 
 *** =jupyter-eval-short-result-max-lines=
